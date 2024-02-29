@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 40px;
+            height: 10000px;
+        }
+
+        .static {
+            display: flex;
+            flex-wrap: wrap;
+            width: 200px;
+            border: 1px solid blue;
+        }
+
+        .static .child {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: orange;
+            position: static;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            text-align: center;
+
+        }
+
+        .relative .child {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: blue;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .relative .child:nth-child(1) {
+            position: relative;
+            left: 20px;
+            top: 10px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .absolute .child {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: green;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .absolute .child:nth-child(1) {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+
+        .absolute .child:nth-child(2) {
+            position: relative;
+        }
+
+        .absolute .child-test {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            left: 2px;
+        }
+
+        .fixed .child {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: violet;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .fixed .child:nth-child(1) {
+            position: fixed;
+            left: 8px;
+        }
+
+        .fixed .child:nth-child(2) {
+            position: absolute;
+            left: 75px;
+        }
+
+        .fixed .child:nth-child(3) {
+            position: fixed;
+            left: 138px;
+        }
+
+        .fixed .child:nth-child(4) {
+            position: relative;
+            left: 195px;
+        }
+
+        .fixed .child:nth-child(5) {
+            position: fixed;
+            left: 268px;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            right: 588px;
+        }
+
+        .flex .child {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: rgb(225, 236, 21);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .index .child {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .index .child:nth-child(1) {
+            background-color: rgb(235, 236, 235);
+            position: relative;
+            z-index: 3;
+        }
+
+        .index .child:nth-child(2) {
+            background-color: rgb(19, 11, 251);
+            position: relative;
+            left: -40px;
+            top: 10px;
+            z-index: 2;
+        }
+
+        .index .child:nth-child(3) {
+            background-color: rgb(246, 9, 9);
+            position: relative;
+            left: -80px;
+            top: 20px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static">
+        <div class="child">s</div>
+        <div class="child">t</div>
+        <div class="child">a</div>
+        <div class="child">t</div>
+        <div class="child">i</div>
+        <div class="child">c</div>
+    </div>
+    <div class="relative">
+        <div class="relative child">r</div>
+        <div class="relative child">e</div>
+        <div class="relative child">l</div>
+        <div class="relative child">a</div>
+        <div class="relative child">t</div>
+        <div class="relative child">i</div>
+        <div class="relative child">v</div>
+        <div class="relative child">e</div>
+    </div>
+    <div class="absolute">
+        <div class="absolute child">a</div>
+        <div class="absolute child">b
+            <div class="absolute child-test"></div>
+        </div>
+        <div class="absolute child">s</div>
+        <div class="absolute child">o</div>
+        <div class="absolute child">l</div>
+        <div class="absolute child">u</div>
+        <div class="absolute child">t</div>
+        <div class="absolute child">e</div>
+    </div>
+    <div class="fixed">
+        <div class="fixed child">f</div>
+        <div class="fixed child">i</div>
+        <div class="fixed child">x</div>
+        <div class="fixed child">e</div>
+        <div class="fixed child">d</div>
+    </div>
+    <div class="flex">
+        <div class="flex child">f</div>
+        <div class="flex child">l</div>
+        <div class="flex child">e</div>
+        <div class="flex child">x</div>
+    </div>
+    <div class="index">
+        <div class="index child">1</div>
+        <div class="index child">2</div>
+        <div class="index child">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Конспект</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/premium-vector/squared-notebook-seamless-pattern-blue-grid-texture-school-notebook-for-mathematics-grid-paper-sheet-vector-illustration-on-white-background_192280-929.jpg");
+        }
+
+        h2,h3, .red_line {
+            margin-top: 1%;
+            font-family: 'URW Chancery L', cursive;
+            text-align: center;
+        }
+
+        pre {
+            margin-top: 1.2%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 142px;
+        }
+
+        .second_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 70px;
+        }
+
+        .third_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 55px;
+        }
+
+        .fourth_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 55px;
+        }
+
+        .fifth_code {
+            margin-top: 1.2%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 160px;
+        }
+        
+        .sixth_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 55px;
+        }
+
+        .seventh_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 160px;
+        }
+
+        .eighth_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 55px;
+        }
+
+        .ninth_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 55px;
+        }
+
+        .tenth_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 55px;
+        }
+
+        .eleventh_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 55px;
+        }
+
+        .twelfth_code {
+            margin-top: 1%;
+            border: 7px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            height: 110px;
+        }
+
+        .list {
+            margin-top: -0.5%;
+
+        }
+
+        .table {
+            width: 100%;
+        }
+
+        ol {
+            margin-top: -1%;
+            margin-left: -1%;
+            text-align: left;
+
+        }
+
+        li {
+            margin-top: -2%;
+        }
+        #main {
+            margin-top: 0%;
+        }
+
+        #main_two {
+            margin-top: 1.5%;
+        }
+
+        .pointer {
+            list-style-type: none;
+            margin-top: 0.5%;
+        }
+
+        .pointer:before {
+            content: "»"
+        }
+
+        #fix_text {
+            margin-top: 1.4%;
+        }
+
+        #fix_text_two {
+            margin-top: 2.5%;
+        }
+        .one_one {
+            background-color: #ddd;
+        }
+
+        p {
+            margin-top: -0.10%;
+            font-family: 'URW Chancery L', cursive;
+            text-align: left;
+            margin-left: 0.8%;
+        }
+
+        .content {
+            margin-top: 1.9%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2 id="main">Конспект по теме «Комбинации селекторов и специфичность»</h2>
+    <p class="red_line">Предположим, есть страница на сайте, где слева размещены статьи, а справа, в боковой колонке
+        идет новостная лента. Ниже псевдоразметка, чтобы было понятно, о чем идет речь.</p>
+    <pre>
+        <ol>
+          <li class="one_one">&lt;div class="articles"&gt;</li>
+          <li>      &lt;h3&gt;Заголовок статьи 1&lt;/h3&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Заголовок статьи 2&lt;/h3&gt;</li>
+          <li>&lt;/div&gt;</li>
+          <li class="one_one">&lt;div class="sidebar"&gt;</li>
+          <li>      &lt;h3&gt;Заголовок статьи 1&lt;/h3&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Заголовок статьи 2&lt;/h3&gt;</li>
+          <li>&lt;/div&gt;</li>
+        </ol>
+    </pre>
+
+    <p>Для заголовков и статей, и новостей, используются теги &lt;h3&gt;. Мы можем отформатировать эти заголовки,
+        используя селектор элемента, например:</p>
+
+    <pre class="second_code">
+        <ol>
+            <li class="one_one">h3 {</li>
+            <li>    font-size: 1.5rem;</li>
+            <li class="one_one">    font-weight: bold;</li>
+            <li>}</li>
+        </ol>
+    </pre>
+
+    <p>Cтоит задача, что заголовки статей должны быть по центру, а заголовки новостей надо сделать темно-красного цвета.
+        Мы можем написать отдельные классы для заголовков статей и заголовков новостей, и в этом классе прописать нужные
+        нам свойства.</p>
+    <p class="content">Но тогда нам придется эти классы указать в разметке для каждого тега &lt;h3&gt; как в статьях,
+        так и в новостях, да и в целом количество классов увеличится. Однако известный философский принцип «Не следует
+        множить сущности без необходимости» актуален везде, в том числе и программировании.</p>
+    <p class="content">Мы можем поступить красивее, а именно использовать комбинации селекторов.</p>
+
+    <h2 id="main_two">Комбинации селекторов.</h2>
+
+    <p class="content">Селекторы можно комбинировать друг с другом используя, так называемые комбинаторы. В задачу,
+        описанную выше, мы можем решить, написав два правила. Для заголовков статей:</p>
+
+    <pre class="third_code">
+        <ol>
+            <li class="one_one">.articles h3 {</li>
+            <li>    font-align: center;</li>
+            <li class="one_one">}</li>
+        </ol>
+    </pre>
+
+    <p style="margin-top: 1.6%;">Для заголовков новостей:</p>
+
+    <pre class="fourth_code">
+        <ol>
+            <li class="one_one">.sidebar h3 {</li>
+            <li>    font-align: center;</li>
+            <li class="one_one">}</li>
+        </ol>
+    </pre>
+
+    <p class="content">Здесь мы использовали комбинатор <mark>пробел</mark>. Т.е. селектор <mark>.articles h3</mark>  
+        выберет для изменений теги <mark>&lt;h3&gt;</mark> , которые находятся внутри элемента с классом <mark>articles</mark> (вне зависимости от уровня вложенности).
+        Этот комбинатор называется «комбинатор потомков» и используется очень часто.</p>
+    
+    <p class="content">Этот комбинатор называется «комбинатор потомков» и используется очень часто.</p>
+
+    <h2>Дочерний селектор.</h2>
+
+    <p class="content">Давайте немного изменим верстку блока со статьями.</p>
+
+    <pre class="fifth_code">
+        <ol>
+          <li class="one_one">&lt;div class="articles"&gt;</li>
+          <li>      &lt;h3&gt;Заголовок статьи 1&lt;/h3&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Заголовок статьи 2&lt;/h3&gt;</li>
+          <li>&lt;div class="promo"&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Рекламная акция&lt;/h3&gt;</li>
+          <li>&lt;/div&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Заголовок статьи 3&lt;/h3&gt;</li>
+          <li>      &lt;h3&gt;Заголовок статьи 4&lt;/h3&gt;</li>
+          <li class="one_one">&lt;/div&gt;</li>
+        </ol>
+    </pre>
+
+    <p id="fix_text" class="content">У нас, среди статей, появился рекламный блок, и в нем также используется заголовок &lt;h3&gt; .</p>
+
+    <p class="content">Использованный нами ранее селектор <mark>.articles h3</mark>  подействует и на заголовок рекламной акции, поскольку он не учитывает уровень вложенности.
+        Если мы хотим изменить только заголовки статей, не трогая рекламный заголовок, то лучше использовать «дочерний селектор» — символ <mark>></mark>  .</p>
+
+    <pre class="sixth_code">
+        <ol>
+            <li class="one_one">.articles > h3 {</li>
+            <li>    font-align: center;</li>
+            <li class="one_one">}</li>
+        </ol>
+    </pre> 
+
+    <p class="content">Селектор <mark>.articles > h3</mark>  выберет для изменения теги h3, которые находятся непосредственно в элементе с классом <mark>articles</mark> , а теги рекламных заголовков затронуты не будут.</p>
+
+    <h2>Комбинатор всех соседних элементов.</h2>
+
+    <p class="content">Комбинатор <mark>~</mark>  выберет все соседние элементы, т.е. элементы у которых такой же контейнер, как и у указанного элемента. Слово «соседний» в данном случае обозначает, 
+        что будут выбраны все элементы находящиеся после указанного.</p>
+
+    <pre class="seventh_code">
+        <ol>
+          <li class="one_one">&lt;div class="articles"&gt;</li>
+          <li>      &lt;h3&gt;Заголовок статьи 1&lt;/h3&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Заголовок статьи 2&lt;/h3&gt;</li>
+          <li>&lt;div class="promo"&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Рекламная акция&lt;/h3&gt;</li>
+          <li>&lt;/div&gt;</li>
+          <li class="one_one">      &lt;h3&gt;Заголовок статьи 3&lt;/h3&gt;</li>
+          <li>      &lt;h3&gt;Заголовок статьи 4&lt;/h3&gt;</li>
+          <li class="one_one">&lt;/div&gt;</li>
+        </ol>
+    </pre>
+
+    <pre class="eighth_code">
+        <ol>
+            <li class="one_one">.first-articles ~ h3 {</li>
+            <li>    color: blue;</li>
+            <li class="one_one">}</li>
+        </ol>
+    </pre> 
+    
+    <p id="fix_text" class="content">В примере выше все заголовки &lt;h3&gt;, которые находятся после заголовка с классом <mark>.first-article</mark> , 
+        станут синего цвета. Заголовок, находящийся внутри &lt;div&gt; с классом <mark>.promo</mark>  затронут не будет, поскольку у него другой контейнер.</p>
+    
+    <h2>Комбинатор следующего соседнего элемента.</h2>
+    
+    <p class="content">Комбинатор <mark>+</mark>  позволяет выбрать элемент, который находится сразу после указанного элемента. При этом, конечно, 
+        у них должен быть общий контейнер.</p>
+    
+    <pre class="ninth_code">
+        <ol>
+            <li class="one_one">.first-articles + * {</li>
+            <li>    margin-top: 3rem;</li>
+            <li class="one_one">}</li>
+        </ol>
+    </pre> 
+
+    <p class="content">В примере выше, написано правило, которое обеспечивает, что любой (один) элемент, который находятся сразу после заголовка 
+        с классом <mark>.first-article</mark> , будет иметь отступ сверху размером <mark>3rem</mark> .</p>
+    
+    <h2>Комбинатор запятая</h2>
+
+    <p class="content">Комбинатор, позволяет сгруппировать селекторы, т.е. задать несколько селекторов для одного правила.</p>
+
+    <pre class="tenth_code">
+        <ol>
+            <li class="one_one">h1, h2, h3, h4, h5, h6 {</li>
+            <li>    margin-bottom: 0;</li>
+            <li class="one_one">}</li>
+        </ol>
+    </pre> 
+
+    <p class="content">В примере выше, мы обнуляем отступы снизу сразу у всех заголовков.</p>
+
+    <h2>Специфичность</h2>
+
+    <p class="content">Посмотрим пример:</p>
+
+    <pre class="eleventh_code">
+        <ol>
+            <li class="one_one">&lt;div class="sidebar"&gt;</li>
+            <li>      &lt;h3&gt;Заголовок новости&lt;/h3&gt;</li>
+            <li class="one_one">&lt;/div&gt;</li>
+          </ol>
+    </pre>
+
+    <pre class="twelfth_code">
+        <ol>
+            <li class="one_one">sidebar h3 {</li>
+            <li>    color: red;</li>
+            <li class="one_one">}</li>
+            <li>h3 {</li>
+            <li  class="one_one">    color: blue;</li>
+            <li>}</li>
+        </ol>
+    </pre> 
+
+    <p id="fix_text_two" class="content">В примере цвет текста для тега <mark>&lt;h3&gt;</mark> , находящегося в контейнере с классом <mark>.sidebar</mark> , прописан 2 раза.</p>
+
+    <p class="content">Вопрос: <i>«Какой цвет будет у этого элемента?»</i></p>
+
+    <p class="content">Ответ: <i>«Красный, поскольку селектор <mark>.sidebar h3</mark>  более специфичен, еще говорят: селектор имеет больший вес».</i></p>
+
+    <p class="content"><i>Специфичность (вес)</i> селектора определяется при помощи 4-х различных значений. Эти значения можно, условно, представить как цифры: тысячи, сотни, десятки, единицы.</p>
+
+    <ul class="list">
+        <li class="pointer">Тысяча – это встроенные стили, добавляемые непосредственно в сам элемент в HTML-разметке.</li>
+        <li class="pointer">Сотня – это идентификатор.</li>
+        <li class="pointer">Десятки – это классы.</li>
+        <li class="pointer">Единицы – это сам элемент или псевдоэлемент.</li>
+    </ul>
+
+    <p class="content">Если не очень понятно, то посмотрите таблицу ниже и все станет ясно:</p>
+
+    <table class="table" border="1">
+        <tr>
+            <th>Селектор</th>
+            <th>Тысячи</th>
+            <th>Сотни</th>
+            <th>Десятки</th>
+            <th>Единицы</th>
+            <th>Специфичность</th>
+        </tr>
+        <tr>
+            <th>div</th>
+            <th>0</th>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+            <th>0001</th>
+        </tr>
+        <tr>
+            <th>.some-class</th>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+            <th>0</th>
+            <th>0010</th>
+        </tr>
+        <tr>
+            <th>&lt;p style=»color: red»&gt;текст&lt;/p&gt;</th>
+            <th>1</th>
+            <th>0</th>
+            <th>0</th>
+            <th>0</th>
+            <th>1000</th>
+        </tr>
+        <tr>
+            <th>.some-class div</th>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+            <th>1</th>
+            <th>0011</th>
+        </tr>
+        <tr>
+            <th>#myid .some-class div</th>
+            <th>0</th>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>0111</th>
+        </tr>
+        <tr>
+            <th>.some-class ul li</th>
+            <th>0</th>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>0012</th>
+        </tr>
+        <tr>
+            <th>.some-class .my-class p span</th>
+            <th>0</th>
+            <th>0</th>
+            <th>2</th>
+            <th>2</th>
+            <th>0022</th>
+        </tr>
+    </table>
+
+    <p class="content" style="margin-top: 1.5%;">В ситуации, если специфичность у селекторов одинакова, действовать будет правило, которое находится ниже в css-файле.
+
+        Если правила находятся в разных css-файлах, то действовать будет правило, которое расположено в файле, подключенном позднее (ниже).</p>
+</body>
+
+</html>

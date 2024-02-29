@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const firstname = "Бато";
+        const lastname = "Ширапов";
+        const yearOfBirth = 2000;
+        const monthOfBirth = 7;
+        const dayOfBirth = 6;
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        const currentMonth = currentDate.getMonth() + 1;
+        const currentDay = currentDate.getDate();
+        let age = currentYear - yearOfBirth;
+        if (currentMonth < monthOfBirth || (currentMonth === monthOfBirth && currentDay < dayOfBirth)) {
+            age--;
+        }
+        let aboutME = `Привет Меня зовут ${lastname + " " + firstname},  0${dayOfBirth}.0${monthOfBirth}.${yearOfBirth}г.р, сейчас мне ${age} года`
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("aboutME").textContent = aboutME;
+        });
+    </script>
+</head>
+<body>
+    <h1>Информация обо мне:</h1>
+    <h4><span id="aboutME"></span></h4>
+</body>
+</html>

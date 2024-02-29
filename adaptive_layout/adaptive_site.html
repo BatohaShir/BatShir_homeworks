@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс Арсалана Рабданова</title>
+    <link rel="course icon"
+        href="https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/0d872b65538de8850e64274222492378.png/s/x50/a/603554/sc/387"
+        type="imgae/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #2F4F4F;
+        }
+
+        header {
+            display: flex;
+            justify-content: left;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #000000;
+            z-index: 100;
+        }
+
+        .logo,
+        .name {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 25px;
+        }
+
+        .name {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .logo {
+            position: relative;
+            top: 2px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box {
+            display: flex;
+            width: 950px;
+            margin: 140px auto;
+        }
+        .card {
+            width: 300px;
+            height: 480px;
+            background: #fff;
+            margin-right: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+            position: relative;
+        }
+
+        .card:last-child {
+            margin-right: 0;
+        }
+
+        .card .img img {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-top: 25%;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        .card a {
+            background: #40E0D0;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            display: inline-block;
+            position: absolute;
+            bottom: 2%;
+            left: 25%;
+        }
+
+        @media (max-width: 450px) {
+            .box {
+                width: 100%;
+                flex-direction: column;
+                position: relative;
+                top: -85px;
+            }
+            .card {
+                margin-right: 0;
+                width: 100%;
+                margin-bottom: 110px;
+            }
+
+            .card a {
+                position: absolute;
+                left:32%;
+            }
+
+            header {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header_menu">
+            <div class="logo">
+                <img src="https://fs-thb02.getcourse.ru/fileservice/file/thumbnail/h/0d872b65538de8850e64274222492378.png/s/x50/a/603554/sc/387"
+                    alt="course's logo">
+            </div>
+            <div class="name">
+                <h4>Курс от Арсалана Рабданова</h4>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="box">
+            <div class="card">
+                <div class="img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png?20170517184425"
+                        alt="HTML_logo" style="height: 275px; width: 275px; position: relative; left: -10px;">
+                </div>
+                <h4>Основы HTML</h4>
+                <p>В данном уроке вы получите представление о том, что такое HTML и для чего он нужен</p>
+                <a href="https://class.rabdanov.com/pl/teach/control/lesson/view?id=319953837&editMode=0">Перейти в урок</a>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/340px-CSS3_logo_and_wordmark.svg.png"
+                        alt="CSS_logo">
+                </div>
+                <h4>Введение в CSS</h4>
+                <p>CSS отвечает за внешний вид сайта</p>
+                <a href="https://class.rabdanov.com/pl/teach/control/lesson/view?id=320311712&editMode=0">Перейти в урок</a>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/340px-CSS3_logo_and_wordmark.svg.png"
+                        alt="CSS_logo">
+                </div>
+                <h4>Основы CSS. Отзывчивый дизайн.</h4>
+                <p>Адаптивная верстка сайта - это тако способ
+                    создания веб-страницы</p>
+                <a href="https://class.rabdanov.com/pl/teach/control/lesson/view?id=321342388&editMode=0">Перейти в урок</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            color: red;
+            font-weight: 700px;
+        }
+        p {
+            font-size: 10px;
+        }
+        .pixel {
+            width: 100px;
+            height: 100px;
+            padding: 15px;
+            background-color: #f3a200;
+        }
+        .em {
+            display: inline-block;
+        }
+        .em .one {
+            width: 6.25em;
+            height: 6.25em;
+            padding: 0.9375em;
+            background-color: #f3a200;
+        }
+        .em .two {
+            width: 6.25em;
+            height: 6.25em;
+            padding: 0.9375em;
+            position: absolute;
+            left: 300px;
+            background-color: #f3a200;
+            font-size: 13px;
+        }
+        .rem {
+            display: inline-block;
+        }
+        .rem .one {
+            width: 6.25rem;
+            height: 6.25rem;
+            padding: 0.9375rem;
+            background-color: #f3a200;
+        }
+        .rem .two {
+            width: 6.25rem;
+            height: 6.25rem;
+            padding: 0.9375rem;
+            position: absolute;
+            left: 300px;
+            background-color: #f3a200;
+            font-size: 13px;
+        }
+        .relativ {
+            width: 50vw;
+            height: 15vh;
+            padding: 1vmax;
+            background-color: #f3a200;
+        }
+        
+    </style>
+</head>
+<body>
+    <h3>Абсолютная(фиксированная)единица пиксели(px)</h3>
+    <div>
+        текст по стандарту равен = <strong>16px</strong>
+        <div style="font-size: 20px;">font-size задан: <strong> 20px </strong>
+            <div style="font-size: 25.5px;">font-size задан: <strong>25.5px</strong>
+                <div>свойство font-size потомка наследует свойство font-size своего родителя, т.е это будет равно: <strong>25.5px</strong></div>
+            </div>
+        </div>
+    </div>
+    <div class="pixel">width : 100px </br>height : 100px </br>padding: 15px;</div>
+    <h3>Относительная единица em. Относительна размеру шрифта</h3>
+    <div style=" color: blue">
+        текст по стандарту равен = <strong>16px</strong>
+        <div style="font-size: 1em;">
+            font-size задан: 1em => 1 * 16 = <strong>16px</strong>
+            <div style="font-size: 1.5em;">
+                font-size задан: 1.5em => 1.5 * 16 = <strong>24px</strong>
+                <div>свойство font-size потомка наследует свойство font-size своего родителя, т.е это будет равно: 1.5em => 1.5 * 16 = <strong>24px</strong></div>
+                <div style="font-size: 1.5em;">здесь немного интереснее em расчитывается по формуле: 
+                    (свойство потомка * размер шрифта родителя = размер шрифта в пикселях), 1.5em * 24px = <strong>36px</strong></div>
+                <div style="font-size: 0.8em;">задается: 0.8em * 24px = <strong>25.5px</strong> 
+                    он так же форматируется по формуле (потомок * результат родительского = размер шрифта в пикселях)</div>
+            </div>
+        </div>
+    </div>
+    <div class="em">
+        <div class="em one">width : 6.25em </br>height : 6.25em </br>padding: 0.9375em;
+        </div>
+        <div class="em two">width : 6.25em </br>height : 6.25em </br>padding: 0.9375em;
+        </div>
+    </div>
+    <h3>Относительная единица rem. Относительна размеру шрифта браузера</h3>
+    <div class="rem">
+        <div style=" color: rgb(0, 0, 0)">
+            текст по стандарту равен = <strong>16px</strong>
+            <div style="font-size: 1rem;">
+                font-size задан: 1rem => 1 * 16 = <strong>16px</strong>
+                <div style="font-size: 1.5rem;">
+                    font-size задан: 1.5rem => 1.5 * 16 = <strong>24px</strong>
+                    <div>свойство font-size элемента наследует свойство font-size всего html документа, т.е это будет равно: 1.5rem => 1.5 * 16 = <strong>24px</strong></div>
+                    <div style="font-size: 1.5rem;">здесь уже отличается от единицы "em", rem не зависит от размера шрифта родительского элемента: 
+                        (элемент * размер шрифта html документа = размер шрифта в пикселях), 1.5em * 16px = <strong>24px</strong></div>
+                </div>
+            </div>
+    </div>
+    <div class="rem">
+        <div class="rem one">width : 6.25rem </br>height : 6.25rem </br>padding: 0.9375rem;
+        </div>
+        <div class="rem two">width : 6.25rem </br>height : 6.25rem </br>padding: 0.9375rem;
+        </div>
+    </div>
+    <h3>% проценты от ... Относительная едицина. Разные CSS свойства вычисляют процент относительно разных значений.</h3>    
+    <div class="percent" style=" color:blue" >
+        <div style="font-size: 100%;">Задаётся font-size: 100% => 16 / 100 * 100 = <strong>16px</strong>
+            <div style="font-size: 150%;">Задаётся font-size: 150% => 16 / 150 * 100 = <strong>24px</strong>
+                <div>Наследуется font-size от родительского элемента: Задаётся font-size: 150% => 16 / 150 * 100 = <strong>24px</strong></div>
+                <div style="font-size: 150%;">Здесь немного интереснее: (размер шрифта родителя / 100% * свойство потомка = размер в пикселях), 24 / 100 * 150 = <strong>36px</strong></div>
+            </div>
+        </div>
+    </div>
+    <h3>VW, VH, VMIN, VMAX - относительно окна (вьюпорта) браузера</h3>
+    <div class="relatives">
+        текст по стандарту равен = <strong>16px</strong>
+        <div style="font-size: 1.5vw;">Задан font-size: <strong>1.5vw</strong>
+            <div style="font-size: 1.5vmax;">Задан font-size: <strong>1.5max</strong>
+                <div style="font-size: 2.5vmin;">Задан font-size: <strong>2.5vmin</strong></div>
+                <div style="font-size: 1.8vh;">Задан font-size: <strong>1.8vh</strong></div>
+            </div>
+        </div>
+    </div>
+    <div class="relativ">width : 50vw </br>height : 15vh </br>padding: 1vmax;
+</body>
+</html>

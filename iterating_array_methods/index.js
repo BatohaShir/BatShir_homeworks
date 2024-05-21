@@ -1,18 +1,4 @@
-//a function that takes two numbers and returns the smaller one
-function min_value(a, b) {
-    if (a < b) {
-        return(`Мешньшее число это ${a}`)
-    } else {
-        return(`Мешньшее число это ${b}`)
-    }
-};
-
-let a = Math.floor(Math.random() * 10);
-console.log(`Ваше первое рандомное число: ${a}`)
-let b = Math.floor(Math.random() * 10);
-console.log(`Ваше второе рандомное число: ${b}`)
-console.log(min_value(a, b));
-
+const inputPrompt = require('prompt-sync')({ encoding: 'utf-8' });
 // a function for calculate 
 let name_first = 'buuz'
 let name_second = 'shulen'
@@ -37,9 +23,9 @@ let third = {
 };
 
 let test = {
-    name: 'test',
-    ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
-    price: 220
+  name: 'test',
+  ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
+  price: 220
 };
 
 let test_2 = {
@@ -65,7 +51,7 @@ let test_5 = {
   ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
   price: 220
 };
-  
+
 let test_6 = {
   name: 'test6',
   ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
@@ -73,9 +59,9 @@ let test_6 = {
 };
 
 let test_7 = {
-name: 'test7',
-ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
-price: 220
+  name: 'test7',
+  ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
+  price: 220
 };
 
 let test_8 = {
@@ -85,9 +71,9 @@ let test_8 = {
 };
 
 let test_9 = {
-name: 'test9',
-ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
-price: 220
+  name: 'test9',
+  ingredients: ['onion', 'garlic', 'green_onion', 'carrot'],
+  price: 220
 };
 
 
@@ -96,41 +82,53 @@ let menu = [first, second, third, test, test_2, test_3, test_4, test_5];
 let vegetarianMenu = [test_5, test_6, test_7, test_8, test_9]
 
 let ingredientsPrices = {
-    flour: 30,
-    beef: 40,
-    mutton: 35,
-    onion: 10,
-    potato: 14,
-    garlic: 6,
-    green_onions: 7,
-    carrot: 13,
-    noodle: 23,
-    chicken: 50
+  flour: 30,
+  beef: 40,
+  mutton: 35,
+  onion: 10,
+  potato: 14,
+  garlic: 6,
+  green_onions: 7,
+  carrot: 13,
+  noodle: 23,
+  chicken: 50
 };
 
 function calculateCookingCost(ingredients) {
-    //let cookingCost = 0;
-    // for (let i = 0; i < ingredients.length; i++) {
-    //     let ingredient = ingredients[i];
-    //     cookingCost += ingredientsPrices[ingredient] || 0;
-    // }
-    //return cookingCost;
-    let ingredient_array = [ingredientsPrices]
-    const cookingCost = ingredient_array.reduce((total, ingredient) => total + ingredientsPrices[ingredient] || 0, 0)
-    return cookingCost;
+  //let cookingCost = 0;
+  // for (let i = 0; i < ingredients.length; i++) {
+  //     let ingredient = ingredients[i];
+  //     cookingCost += ingredientsPrices[ingredient] || 0;
+  // }
+  //return cookingCost;
+  let ingredient_array = [ingredientsPrices]
+  const cookingCost = ingredient_array.reduce((total, ingredient) => total + ingredientsPrices[ingredient] || 0, 0)
+  return cookingCost;
 }
 
 menu.forEach(dish => {
-    let cookingCost = calculateCookingCost(dish.ingredients);
-    let profit = dish.price - cookingCost;
-    dish.profit = profit;
-    console.log(`Профит блюда ${dish.name}: ${profit} и профит добавлен в обьект`);
+  let cookingCost = calculateCookingCost(dish.ingredients);
+  let profit = dish.price - cookingCost;
+  dish.profit = profit;
+  console.log(`Профит блюда ${dish.name}: ${profit} и профит добавлен в обьект`);
 });
 console.log(menu)
+
+
 
 //Использование map
 const newMenu = menu.map(dish => `${dish.name} : ${dish.price}`)
 console.log(newMenu)
+
+//МАССИВ ИЗ ВЕГЕТАРИАНСКИХ БЛЮД
+let nonVegetarian = ['beef', 'chicken', 'mutton', 'pork']
+let askVegetarianProduct = inputPrompt(`Вот вегетарианские продукты в нашем ресторане: ${nonVegetarian}. 
+Если у вас есть что добавить нажмите на английскую букву "Y", если нечего добавить то нажмите на букву "N": `)
+if (askVegetarianProduct.toUpperCase() === 'Y') {
+  let addNewProduct = inputPrompt('напишите свой продукт на английском языке: ')
+  nonVegetarian.push(addNewProduct)
+}
+console.log(nonVegetarian)
 
 //использование some
 const isVegetarianDish = menu.some(isVegetarian)
@@ -171,12 +169,11 @@ if (allDishVegetatianCheckTest === true) {
   console.log('К сожалению не каждое блюдо вегетарианское в Тест меню')
 }
 
+
+//Функция проверки на вегетарианское блюдо
 function isVegetarian(dish) {
-    return !dish.ingredients.includes('beef') && !dish.ingredients.includes('mutton') 
-    && !dish.ingredients.includes('chicken') && !dish.ingredients.includes('pork');
+  return !nonVegetarian.some(nonVeg => dish.ingredients.includes(nonVeg));
 }
-
-
 
 
 

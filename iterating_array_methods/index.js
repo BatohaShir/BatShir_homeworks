@@ -131,7 +131,7 @@ if (askVegetarianProduct.toUpperCase() === 'Y') {
 console.log(nonVegetarian)
 
 //использование some
-const isVegetarianDish = menu.some(isVegetarian)
+const isVegetarianDish = menu.some(dish => ckeckIsVegetarianDish(dish, nonVegetarian))
 if (isVegetarianDish === true) {
   console.log('Меню имеет в себе вегетаринские блюда!!!')
 }else{
@@ -139,7 +139,7 @@ if (isVegetarianDish === true) {
 }
 
 //использование every
-let allDishVegetatianCheck = menu.every(isVegetarian)
+let allDishVegetatianCheck = menu.every(dish => ckeckIsVegetarianDish(dish, nonVegetarian))
 if (allDishVegetatianCheck === true) {
   console.log('У нас все блюда вегетарианские!!!')
 }else{
@@ -148,13 +148,13 @@ if (allDishVegetatianCheck === true) {
 
 //использование filter
 console.log('Вегетарианские блюда:')
-const filtUse = menu.filter(dish => isVegetarian(dish))
+const filtUse = menu.filter(dish => ckeckIsVegetarianDish(dish, nonVegetarian))
 console.log(filtUse)
 
 //============================ПРОВЕРКА ВЕГЕТАРИАНСКОГО МЕНЮ============================
 
 //использование some для вегетаринского меню
-const isVegetarianDishTest = vegetarianMenu.some(isVegetarian)
+const isVegetarianDishTest = vegetarianMenu.some(dish => ckeckIsVegetarianDish(dish, nonVegetarian))
 if (isVegetarianDishTest === true) {
   console.log('Тест вегетарианское Меню имеет в себе вегетаринские блюда!!!')
 }else{
@@ -162,7 +162,7 @@ if (isVegetarianDishTest === true) {
 }
 
 //использование every для вегетаринского меню
-let allDishVegetatianCheckTest = vegetarianMenu.every(isVegetarian)
+let allDishVegetatianCheckTest = vegetarianMenu.every(dish => ckeckIsVegetarianDish(dish, nonVegetarian))
 if (allDishVegetatianCheckTest === true) {
   console.log('В тест меню все блюда вегетарианские!!!')
 }else{
@@ -171,7 +171,7 @@ if (allDishVegetatianCheckTest === true) {
 
 
 //Функция проверки на вегетарианское блюдо
-function isVegetarian(dish) {
+function ckeckIsVegetarianDish(dish, nonVegetarian) {
   return !nonVegetarian.some(nonVeg => dish.ingredients.includes(nonVeg));
 }
 

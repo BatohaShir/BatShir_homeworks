@@ -19,8 +19,7 @@ async function fetchIngredient() {
 }
 
 async function main() {
-  let menu = await fetchMenu();
-  let ingredientsPrices = await fetchIngredient();
+  let [menu, ingredientsPrices] = await Promise.all([fetchMenu(), fetchIngredient()]);
   function calculateCookingCost(ingredients) {
 
     let ingredient_array = [ingredientsPrices]

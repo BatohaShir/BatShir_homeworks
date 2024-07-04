@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Motserrat";
+}
+
+header {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    background-color: #1F2833;
+    position: relative;
+}
+
+.Logo,
+.Nav_menu {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+.Logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 1px;
+    background-size: cover;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nav_menu li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 45px;
+}
+
+.Nav_menu a {
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.Nav_menu a:hover {
+    color: rgb(6, 177, 230);
+}
+
+.cart{
+    float: right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+    color: white;
+    position: relative;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.cart:hover,.active {
+    color: rgb(0, 60, 255);
+    transform: scale(2);
+}
+
+.shop-cart {
+    position: absolute;
+    top: 75px;
+    right: 270px;
+    width: 350px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 4px 5px 15px -7px #606060;
+    box-shadow: 4px 5px 15px -7px #606060;
+    border-radius: 5px;
+    text-align: center
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 80px 20px 80px;
+    margin-top: 45px;
+}
+
+.art-board {
+    border-radius: 40px;
+    border: 6px solid black;
+    box-shadow: -30px 70px 150px -20px rgba(51, 51, 51, 0.25);
+}
+
+.art-board_container {
+    width: 100%;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 1px solid lavender;
+    margin: 13px;
+    box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
+}
+
+.card_image {
+    position: relative;
+    height: 140px;
+}
+
+.card_image>img {
+    max-width: 100%;
+    border-bottom-right-radius: 30px;
+    transform: rotate(10deg) translate(-15px, -55px);
+    position: absolute;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card_info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px 30px 20px 30px;
+}
+
+.card_info h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card_info p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card_info_price {
+    text-align: right;
+    color: orangered;
+}
+
+.add_to_cart {
+    float: right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+    color: rgb(0, 0, 0);
+    position: relative;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.buy_all {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #000000;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}

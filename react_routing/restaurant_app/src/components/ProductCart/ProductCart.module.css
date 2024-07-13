@@ -1,0 +1,28 @@
+.shop_cart {
+    position: absolute;
+    top: 75px;
+    right: 270px;
+    width: 350px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 4px 5px 15px -7px #606060;
+    box-shadow: 4px 5px 15px -7px #606060;
+    border-radius: 5px;
+    text-align: center
+}
+.removeProduct {
+    border-radius: 50%;
+    width: 20px;
+    margin-right: -30px;
+    background-color: red
+}
+.glow_on_hover {
+    width: 220px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative
+}

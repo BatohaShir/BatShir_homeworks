@@ -1,0 +1,98 @@
+export const menu = [
+    {
+      name: 'Буузы',
+      price: 100,
+      image: 'https://storage.weacom.ru/v2080/2b/izF-yNUeRyk.jpg',
+      ingredients: 'Фарш, тесто, лук',
+      small_image_one: 'https://orda03.ru/wp-content/uploads/2021/02/TDN_0726-Edit.jpg',
+      small_image_two: 'https://orda03.ru/wp-content/uploads/2021/02/%D0%B1%D1%83%D1%83%D0%B7%D1%8B-%D0%B8%D0%B7-%D0%B1%D0%B0%D1%80%D0%B0%D0%BD%D0%B8%D0%BD%D1%8B-scaled.jpg',
+      small_image_tree: 'https://absoluttv.ru/uploads/posts/2022-04/1650287991_buryatskie-buuzy.jpg',
+      dish_info_one: 'Буузы – национальное бурятское блюдо.',
+      dish_info_two: 'Традиционное бурятское блюдо буузы',
+      category: 'Завтраки'
+    },
+    {
+      name: 'Шулэн',
+      price: 80,
+      image: 'https://fort.crimea.com/catering/uploads/fotos/94a0054c-06ff-11eb-bb1f-bc5ff44a223e_1.jpg',
+      ingredients: 'Мясо, лук, лапша домашняя',
+      small_image_one: '',
+      small_image_two: '',
+      small_image_tree: '',
+      dish_info_one: 'Шулэн – национальное бурятское блюдо.',
+      dish_info_two: '',
+      category: 'Завтраки'
+    },
+    {
+      name: 'Цуйван',
+      price: 120,
+      image: 'https://orda03.ru/wp-content/uploads/2021/02/TDN_0688-600x400.jpg',
+      ingredients: 'Мясо, лук, лапша домашняя',
+      small_image_one: '',
+      small_image_two: '',
+      small_image_tree: '',
+      dish_info_one: 'Цуйван – национальное монгольское блюдо.',
+      dish_info_two: '',
+      category: 'Обед'
+    },
+    {
+      name: 'Хушууры',
+      price: 90,
+      image: 'https://orda03.ru/wp-content/uploads/2021/02/TDN_0717-600x400.jpg',
+      ingredients: 'Фарш, тесто, лук',
+      small_image_one: '',
+      small_image_two: '',
+      small_image_tree: '',
+      dish_info_one: 'Хушууры – национальное бурятское блюдо.',
+      dish_info_two: '',
+      category: 'Обед'
+    },
+    {
+      name: 'Шарбин',
+      price: 60,
+      image: 'https://eda.yandex.ru/images/3595156/2ef6878c16bee14087088dff3bd9e3f0-800x800.jpeg',
+      ingredients: 'Фарш, тесто, лук',
+      small_image_one: '',
+      small_image_two: '',
+      small_image_tree: '',
+      dish_info_one: 'Шарбин – национальное бурятское блюдо.',
+      dish_info_two: '',
+      category: 'Ужин'
+    },
+    {
+      name: 'Хорхог',
+      price: 60,
+      image: 'https://pbs.twimg.com/media/FJhl-uGakAIevhz.jpg',
+      ingredients: 'Мясо, морковь, лук, перец',
+      small_image_one: '',
+      small_image_two: '',
+      small_image_tree: '',
+      dish_info_one: 'Хорхог – национальное монгольское блюдо.',
+      dish_info_two: '',
+      category: 'Ужин'
+    },
+    {
+      name: 'Боодог',
+      price: 1900,
+      image: 'https://www.gastronomiac.com/wp/wp-content/uploads/2021/12/Boodog-mongol.jpg',
+      ingredients: 'Мясо, морковь, лук, перец',
+      small_image_one: '',
+      small_image_two: '',
+      small_image_tree: '',
+      dish_info_one: 'Боодог – национальное бурятское блюдо.',
+      dish_info_two: '',
+      category: 'Завтраки'
+    },
+    {
+      name: 'Комбо',
+      price: 1900,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdtQH1YqURbvP1Pa7yYX_NnzwxZwP-cGXP5nQ3CDOLrXiAnIk7kkVrYaHrO_lcSzAuYcw&usqp=CAU',
+      ingredients: 'ывппщоуапоу пуап',
+      small_image_one: '',
+      small_image_two: '',
+      small_image_tree: '',
+      dish_info_one: 'Комбо – национальное комбо блюдо.',
+      dish_info_two: '',
+      category: 'Обед'
+    },
+  ]
